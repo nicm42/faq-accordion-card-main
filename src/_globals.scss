@@ -5,3 +5,13 @@ body {
   background: $softViolet;
   background: linear-gradient($softViolet, $softBlue) no-repeat;
 }
+
+main {
+  background-color: white;
+  padding: 1em;
+  border-radius: 0.75rem;
+}
+
+h1 {
+  text-align: center;
+}
