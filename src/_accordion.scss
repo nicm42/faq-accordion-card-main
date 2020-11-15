@@ -1,6 +1,7 @@
 .entry {
   position: relative;
   margin-bottom: 2em;
+  color: $veryDarkGreyishBlue;
 }
 
 .entry::after {
@@ -25,4 +26,5 @@
 
 .answer {
   display: none;
+  color: $darkGreyishBlue;
 }
