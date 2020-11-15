@@ -12,6 +12,8 @@ main {
     display: flex;
     min-width: 800px;
     width: 800px;
+    padding: 6em;
+    padding-right: 7em;
   }
 }
 
@@ -23,6 +25,12 @@ main {
 .pattern {
   display: block;
   margin: 0 auto;
+
+  @include breakpoint-up(large) {
+    position: absolute;
+    left: -10%;
+    bottom: -10%;
+  }
 }
 
 .illustration {
@@ -33,19 +41,20 @@ main {
   transform: translateX(-50%);
 
   @include breakpoint-up(large) {
-    display: flex;
-    left: 0;
+    left: -10%;
+    top: 0;
     transform: translateX(0)
   }
 }
 
 .pattern-desktop,
-.illustration-desktop {
+.illustration-desktop,
+.illustration-box {
   display: none;
 }
 
 .pattern-desktop {
-  width: 350px;
+  width: 450px;
 }
 
 @include breakpoint-up(large) {
@@ -53,9 +62,15 @@ main {
   .illustration-mobile {
     display: none;
   }  
+
   .pattern-desktop,
-  .illustration-desktop {
+  .illustration-desktop,
+  .illustration-box {
     display: block;
+  }
+
+  .illustration-box {
+    display: none;
   }
 }
 
