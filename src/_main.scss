@@ -2,8 +2,6 @@ main {
   position: relative;
   min-width: 80vw;
   margin: 0 auto;
-  padding: 1em;
-  padding-right: 2em;
   border-radius: 0.75rem;
   background-color: white;
   box-shadow: 0 2em 1em -0.5em rgba(0, 0, 0, 0.2);
@@ -12,8 +10,6 @@ main {
     display: flex;
     min-width: 800px;
     width: 800px;
-    padding: 6em;
-    padding-right: 7em;
   }
 }
 
@@ -22,14 +18,23 @@ main {
   flex-basis: 50%;
 }
 
+.images {
+  position: relative;
+  
+  @include breakpoint-up(large) {
+    width: 450px;
+    height: 100%;
+    overflow: hidden;
+    direction: rtl;
+  }
+}
+
 .pattern {
   display: block;
   margin: 0 auto;
 
   @include breakpoint-up(large) {
     position: absolute;
-    left: -10%;
-    bottom: -10%;
   }
 }
 
@@ -41,9 +46,10 @@ main {
   transform: translateX(-50%);
 
   @include breakpoint-up(large) {
-    left: -10%;
+    width: 450px;
     top: 0;
-    transform: translateX(0)
+    left: -40%;
+    transform: translateX(0);
   }
 }
 
