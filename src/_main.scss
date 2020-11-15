@@ -47,6 +47,12 @@ main {
   }
 }
 
+.illustration-box {
+  position: absolute;
+  top: 30%;
+  left: -15%;
+}
+
 .pattern-desktop,
 .illustration-desktop,
 .illustration-box {
@@ -67,10 +73,6 @@ main {
   .illustration-desktop,
   .illustration-box {
     display: block;
-  }
-
-  .illustration-box {
-    display: none;
   }
 }
 
