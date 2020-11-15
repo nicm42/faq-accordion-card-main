@@ -16,12 +16,17 @@
 
 .question {
   position: relative;
+  cursor: pointer;
 }
 
 .question::after {
   position: absolute;
   content: url(images/icon-arrow-down.svg);
   right: -1em;
+}
+
+.question:active {
+  color: $softRed;
 }
 
 .answer {
