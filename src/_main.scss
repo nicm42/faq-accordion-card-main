@@ -1,0 +1,26 @@
+main {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1em;
+  border-radius: 0.75rem;
+  background-color: white;
+  box-shadow: 0 2em 1em -0.5em rgba(0, 0, 0, 0.2)
+}
+
+.pattern {
+  display: block;
+  margin: 0 auto;
+}
+
+.illustration {
+  display: block;
+  position: absolute;
+  top: -108px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h1 {
+  text-align: center;
+}
