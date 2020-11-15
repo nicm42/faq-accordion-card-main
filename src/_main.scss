@@ -6,7 +6,18 @@ main {
   padding-right: 2em;
   border-radius: 0.75rem;
   background-color: white;
-  box-shadow: 0 2em 1em -0.5em rgba(0, 0, 0, 0.2)
+  box-shadow: 0 2em 1em -0.5em rgba(0, 0, 0, 0.2);
+
+  @include breakpoint-up(large) {
+    display: flex;
+    min-width: 800px;
+    width: 800px;
+  }
+}
+
+.images,
+.accordion {
+  flex-basis: 50%;
 }
 
 .pattern {
@@ -20,9 +31,31 @@ main {
   top: -108px;
   left: 50%;
   transform: translateX(-50%);
+
+  @include breakpoint-up(large) {
+    display: flex;
+    left: 0;
+    transform: translateX(0)
+  }
 }
 
-h1 {
-  text-align: center;
-  color: $veryDarkBlue;
+.pattern-desktop,
+.illustration-desktop {
+  display: none;
 }
+
+.pattern-desktop {
+  width: 350px;
+}
+
+@include breakpoint-up(large) {
+  .pattern-mobile,
+  .illustration-mobile {
+    display: none;
+  }  
+  .pattern-desktop,
+  .illustration-desktop {
+    display: block;
+  }
+}
+
