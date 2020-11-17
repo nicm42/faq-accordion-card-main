@@ -1,0 +1,19 @@
+.images {
+  min-height: 104px;
+  background: url('images/bg-pattern-mobile.svg') center top no-repeat;
+}
+
+.illustration {
+  position: absolute;
+  top: -108px;
+  left: calc(50% - 12px); //For some reason this image has space on the left, so this calc moves it over so it looks centred
+  transform: translateX(-50%);
+
+  @include breakpoint-up(large) {
+    width: 450px;
+    top: 0;
+    left: -40%;
+    transform: translateX(0);
+    transform: translateY(50%);
+  }
+}

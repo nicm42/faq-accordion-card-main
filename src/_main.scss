@@ -25,31 +25,16 @@ main {
     width: 450px;
     height: 100%;
     overflow: hidden;
-    direction: rtl;
   }
 }
 
 .pattern {
-  display: block;
-  margin: 0 auto;
-
-  @include breakpoint-up(large) {
-    position: absolute;
-  }
-}
-
-.illustration {
-  display: block;
   position: absolute;
-  top: -108px;
+  display: block;
   left: 50%;
   transform: translateX(-50%);
 
   @include breakpoint-up(large) {
-    width: 450px;
-    top: 0;
-    left: -40%;
-    transform: translateX(0);
   }
 }
 
