@@ -1,19 +1,33 @@
 .images {
   min-height: 104px;
-  background: url('images/bg-pattern-mobile.svg') center top no-repeat;
+  background: url(images/bg-pattern-mobile.svg) center top no-repeat;
+
+  @include breakpoint-up(large) {
+    background: url(images/illustration-woman-online-desktop.svg),
+                url(images/bg-pattern-desktop.svg);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+  }
 }
 
-.illustration {
+.illustration-mobile {
   position: absolute;
   top: -108px;
   left: calc(50% - 12px); //For some reason this image has space on the left, so this calc moves it over so it looks centred
   transform: translateX(-50%);
 
   @include breakpoint-up(large) {
-    width: 450px;
-    top: 0;
-    left: -40%;
-    transform: translateX(0);
-    transform: translateY(50%);
+    display: none;
+  }
+}
+
+.illustration-box {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: -30%;
+
+  @include breakpoint-up(large) {
+    display: block;
   }
 }
