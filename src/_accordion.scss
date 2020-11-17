@@ -6,18 +6,29 @@
     padding: 6em;
     padding-right: 7em;
   }
-
 }
 
 h1 {
   text-align: center;
   color: $veryDarkBlue;
+
+  @include breakpoint-up(large) {
+    margin-bottom: 1.5em;
+    text-align: left;
+    font-size: 1.5rem;
+  }
 }
 
 .entry {
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 2em;
   color: $veryDarkGreyishBlue;
+
+  @include breakpoint-up(large) {
+    margin-bottom: 3em;
+  }
 }
 
 .entry::after {
@@ -46,6 +57,12 @@ h1 {
 }
 
 .answer {
-  display: none;
+  //hide answers initially
+  flex: 0 0 0;
+  overflow: hidden;
   color: $darkGreyishBlue;
+}
+
+.answer.open {
+  flex-basis: 100%;
 }
