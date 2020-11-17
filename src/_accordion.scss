@@ -23,7 +23,9 @@ h1 {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 2px solid $lightGreyishBlue;
   color: $veryDarkGreyishBlue;
 
   @include breakpoint-up(large) {
@@ -31,7 +33,7 @@ h1 {
   }
 }
 
-.entry::after {
+/* .entry::after {
   position: absolute;
   content: '';
   width: 100%;
@@ -39,7 +41,7 @@ h1 {
   left: 0;
   bottom: -1em;
   background-color: $lightGreyishBlue;
-}
+} */
 
 .question {
   position: relative;
