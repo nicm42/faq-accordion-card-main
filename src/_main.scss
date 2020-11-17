@@ -20,10 +20,4 @@ main {
 
 .images {
   position: relative;
-  
-  @include breakpoint-up(large) {
-    width: 450px;
-    height: 100%;
-    overflow: hidden;
-  }
 }
