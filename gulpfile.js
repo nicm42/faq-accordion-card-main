@@ -8,15 +8,11 @@ const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
-const babel = require('gulp-babel');
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
 
 // File paths
 const files = { 
     htmlPath: './*.html',
     scssPath: './src/**/*.scss',
-    jsPath: './src/**/*.js'
 }
 
 // Sass task: compiles the style.scss file into style.css
@@ -30,54 +26,28 @@ function scssTask(){
     );
 }
 
-// JS task: concatenates and uglifies JS files to script.js
-function jsTask(){
-    return src([
-        files.jsPath
-        //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
-        ])
-        .pipe(sourcemaps.init()) // initialize sourcemaps first
-        .pipe(babel())
-        .pipe(concat('script.js'))
-        .pipe(uglify())
-        .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
-        .pipe(dest('./')
-    );
-}
-
-// Cachebust
-/*function cacheBustTask(){
-    var cbString = new Date().getTime();
-    return src(['index.html'])
-        .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
-        .pipe(dest('./'));
-}*/
-
 function watchTask() {
     browserSync.init({
         server: {
             baseDir: './'
         }
     });
-    watch([files.scssPath, files.jsPath],
+    watch([files.scssPath],
         series(
-            parallel(scssTask, jsTask),
-            //cacheBustTask
+            parallel(scssTask),
         )
-    ).on('change', browserSync.reload);
-    watch(files.htmlPath).on('change', browserSync.reload);    
+    ).on('change', browserSync.reload);    
+    watch(files.htmlPath).on('change', browserSync.reload);
 }
 
 // Export the default Gulp task so it can be run
 // Runs the scss and js tasks simultaneously
-// then runs cacheBust, then watch task
+// then watch task
 exports.default = series(
-    parallel(scssTask, jsTask), 
-    //cacheBustTask,
+    parallel(scssTask), 
     watchTask
 );
 
 //So we can just run these, if we want to
 exports.scssTask = scssTask;
-exports.jsTask = jsTask;
 exports.watch = watchTask;
