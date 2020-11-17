@@ -57,12 +57,5 @@ h1 {
 }
 
 .answer {
-  //hide answers initially
-  flex: 0 0 0;
-  overflow: hidden;
   color: $darkGreyishBlue;
-}
-
-.answer.open {
-  flex-basis: 100%;
 }
