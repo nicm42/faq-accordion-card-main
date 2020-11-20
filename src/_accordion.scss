@@ -39,6 +39,10 @@ h1 {
   cursor: pointer;
 }
 
+.question::-webkit-details-marker {
+  display: none;
+}
+
 .question::after {
   position: absolute;
   content: url(images/icon-arrow-down.svg);
