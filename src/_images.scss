@@ -1,5 +1,5 @@
 .images {
-  min-height: 104px;
+  min-height: $imageHeightMob;
   background: url(images/bg-pattern-mobile.svg) center top no-repeat;
 
   @include breakpoint-up(large) {
@@ -12,7 +12,7 @@
 
 .illustration-mobile {
   position: absolute;
-  top: -108px;
+  top: $imageTopMob;
   left: calc(50% - 12px); //For some reason this image has space on the left, so this calc moves it over so it looks centred
   transform: translateX(-50%);
 
