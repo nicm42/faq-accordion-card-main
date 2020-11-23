@@ -1,8 +1,7 @@
 .accordion {
-  /* @include breakpoint-up(large) {
-    padding: 6em;
-    padding-right: 7em;
-  } */
+  @include breakpoint-up(large) {
+    padding: 4em 9em 4em 11em;
+  }
 }
 
 h1 {

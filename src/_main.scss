@@ -9,7 +9,9 @@ main {
 
   @include breakpoint-up(large) {
     display: flex;
-    min-width: 60vw;
+    min-width: 63vw;
+    min-height: 67vh;
+    padding: 0;
   }
 }
 
