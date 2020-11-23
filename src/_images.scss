@@ -1,11 +1,12 @@
 .images {
+  position: relative;
   min-height: $imageHeightMob;
   background: url(images/bg-pattern-mobile.svg) center top no-repeat;
 
   @include breakpoint-up(large) {
-    background: url(images/illustration-woman-online-desktop.svg),
-                url(images/bg-pattern-desktop.svg);
-    background-position: 100% 50%;
+    flex-basis: 60%;
+    background: url(images/illustration-woman-online-desktop.svg) -10px 48% / contain,
+                url(images/bg-pattern-desktop.svg) 118% 70% / cover;
     background-repeat: no-repeat;
   }
 }
@@ -24,8 +25,8 @@
 .illustration-box {
   display: none;
   position: absolute;
-  top: 50%;
-  left: -60%;
+  top: 40%;
+  left: -23%;
 
   @include breakpoint-up(large) {
     display: block;
