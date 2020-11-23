@@ -1,6 +1,7 @@
 .accordion {
   @include breakpoint-up(large) {
-    padding: 4em 9em 4em 11em;
+    padding: 4em 9em 4em 0;
+    flex-basis: 40%;
   }
 }
 
