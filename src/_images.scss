@@ -1,19 +1,19 @@
 .images {
   position: relative;
-  min-height: $imageHeightMob;
+  min-height: $imageSize;
   background: url(images/bg-pattern-mobile.svg) center top no-repeat;
 
   @include breakpoint-up(large) {
     flex-basis: 60%;
-    background: url(images/illustration-woman-online-desktop.svg) -10px 48% / contain,
-                url(images/bg-pattern-desktop.svg) 118% 70% / cover;
+    background: url(images/illustration-woman-online-desktop.svg) $imageSizeNegative 50% / contain,
+                url(images/bg-pattern-desktop.svg) $imageSizeNegative 0 / cover;
     background-repeat: no-repeat;
   }
 }
 
 .illustration-mobile {
   position: absolute;
-  top: $imageTopMob;
+  top: $imageSizeNegative;
   left: calc(50% - 12px); //For some reason this image has space on the left, so this calc moves it over so it looks centred
   transform: translateX(-50%);
 
@@ -26,7 +26,8 @@
   display: none;
   position: absolute;
   top: 40%;
-  left: -23%;
+  left: $imageSizeNegative;
+  max-width: 14vw;
 
   @include breakpoint-up(large) {
     display: block;
