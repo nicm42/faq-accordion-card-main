@@ -9,6 +9,10 @@
                 url(images/bg-pattern-desktop.svg) -5vw 0 / cover;
     background-repeat: no-repeat;
   }
+
+  @include breakpoint-up(large) {
+    flex-basis: 60%;
+  }
 }
 
 .illustration-mobile {
