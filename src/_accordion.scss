@@ -1,6 +1,6 @@
 .accordion {
-  @include breakpoint-up(large) {
-    padding: 4em 9em 4em 0;
+  @include breakpoint-up(medium) {
+    padding: 4em 9em 4em 1em;
     flex-basis: 40%;
   }
 }
@@ -10,7 +10,7 @@ h1 {
   color: $veryDarkBlue;
   font-size: 2rem;
 
-  @include breakpoint-up(large) {
+  @include breakpoint-up(medium) {
     text-align: left;
   }
 }

@@ -7,7 +7,7 @@ main {
   background-color: white;
   box-shadow: 0 2em 1em -0.5em rgba(0, 0, 0, 0.2);
 
-  @include breakpoint-up(large) {
+  @include breakpoint-up(medium) {
     display: flex;
     min-width: 63vw;
     min-height: 67vh;
