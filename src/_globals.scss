@@ -1,0 +1,15 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: $softViolet;
+  background: linear-gradient($softViolet, $softBlue) no-repeat;
+  font-size: $fontSize;
+  font-family: $fontFamily;
+}
+
+.attribution {
+  padding-top: 1em;
+  color: $veryDarkBlue
+}
+

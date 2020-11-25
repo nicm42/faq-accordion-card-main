@@ -1,0 +1,67 @@
+.accordion {
+  @include breakpoint-up(medium) {
+    padding: 4em 4em 4em 1em;
+    flex-basis: 50%;
+  }
+
+  @include breakpoint-up(large) {
+    padding-right: 9em;
+    flex-basis: 40%;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: $veryDarkBlue;
+  font-size: 2rem;
+
+  @include breakpoint-up(medium) {
+    text-align: left;
+  }
+}
+
+.entry {
+  position: relative;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 2px solid $lightGreyishBlue;
+  color: $veryDarkGreyishBlue;
+}
+
+.question {
+  position: relative;
+  list-style: none;
+  font-size: 1.17em;
+  cursor: pointer;
+}
+
+.question::-webkit-details-marker {
+  display: none;
+}
+
+.question::after {
+  position: absolute;
+  content: url(images/icon-arrow-down.svg);
+  right: 1em;
+  transition: transform 250ms linear;
+}
+
+.entry[open] .question {
+  font-weight: 700;
+}
+
+.entry[open] .question::after {
+  transform: rotate(180deg);
+}
+
+.question:hover,
+.question:active {
+  color: $softRed;
+}
+
+.answer {
+  margin-top: 1em;
+  margin-right: 2em;
+  line-height: 1.5;
+  color: $darkGreyishBlue;
+}
