@@ -41,7 +41,7 @@ h1 {
 .question::after {
   position: absolute;
   content: url(images/icon-arrow-down.svg);
-  right: 0;
+  right: 1em;
   transition: transform 250ms linear;
 }
 
