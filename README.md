@@ -5,6 +5,7 @@
 * [General info](#general-info)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
+* [Learnings](#learnings)
 * [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
@@ -21,6 +22,9 @@ I didn't know how to do an accordion, so I tried this. The challenge included an
 * HTML: details and summary tags
 * SCSS
 * Gulp 4
+
+## Learnings
+* HTML details and summary tags
 
 ## Setup
 To view this project visit the [demo](https://frontendmentor-faq-accordion.netlify.app/) or download the files and open index.html
